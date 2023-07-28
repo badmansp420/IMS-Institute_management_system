@@ -1,0 +1,30 @@
+
+.logo img{
+    height: 120px;
+    width: 135px;
+    margin-left: 5%;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.logo ul{
+    padding: 0%;
+    display: flex;  
+    margin-left: 20px; 
+    list-style: none;
+}
+.logo ul a{
+    margin-left: 100px;
+}
+.logo ul li h1{
+    margin-left: 250px;
+    font-size: 50px;
+}
+.navbar{
+    margin-top: 0px;
+    padding: 0%;
+    background-color: rgb(46, 95, 173);
+    height: 40px;
+    cursor: pointer;
+}
+
+
