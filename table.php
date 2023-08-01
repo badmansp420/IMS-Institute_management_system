@@ -238,7 +238,7 @@ include('server.php');
                                             <th>Mobile No.</th>
 
                                             <th>Photo</th>
-                                            <th>Action</th>
+                                            <!-- <th>Action</th> -->
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -288,37 +288,37 @@ include('server.php');
 
                                                     <td><img src="<?php echo "upload/" . $row['st_image']; ?>" height="80px"
                                                             width="65px"></td>
-                                                    <td>
-                                                        <!--a href="st_edit.php?reg_no=<//?= $row['reg_no'] ?>" class="btn btn-success btn-sm "-->
-                                                        <!--Edit-->
-                                                        <!--/a-->
-                                                        <form action="" method="post">
-                                                            <button type="submit" value="<?php $row['reg_no']; ?>"
-                                                                onclick="btn()" name="delete"
-                                                                class="btn btn-danger btn-sm ">Delete</button>
-                                                        </form>
+                                                    <!--  <td> -->
+                                                    <!--a href="st_edit.php?reg_no=<//?= $row['reg_no'] ?>" class="btn btn-success btn-sm "-->
+                                                    <!--Edit-->
+                                                    <!--/a-->
+                                                    <!-- <form action="" method="post">
+                                                        <button type="button" value="" onclick="btn()" name="delete"
+                                                            class="btn btn-danger btn-sm ">Delete</button>
+                                                    </form> -->
 
-                                                    </td>
+                                                    <!-- </td> -->
                                                 </tr>
+
                                                 <?php $no++;
-                                                echo "<script>console.log($row['reg_no'])</script>";
+
                                             }
                                         }
 
 
-                                        if (isset($_POST['delete'])) {
-
-                                            $registration = mysqli_real_escape_string($connection, $_GET['reg_no']);
-
-                                            $query = "DELETE FROM student WHERE reg_no='$registration'";
-                                            $query_run = mysqli_query($connection, $query);
-                                            if ($query_run) {
-                                                echo "<script>alert('Deleted')</script>";
-                                            } else {
-                                                echo "<script>alert('Not Deleted')</script>";
-                                            }
-                                        }
-                                        ?>
+                                        // if (isset($_POST['delete'])) {
+                                        
+                                        //     $registration = mysqli_real_escape_string($connection, $_GET['reg_no']);
+                                        
+                                        //     $query = "DELETE FROM student WHERE reg_no='$registration'";
+                                        //     $query_run = mysqli_query($connection, $query);
+                                        //     if ($query_run) {
+                                        //         echo "<script>alert('Deleted')</script>";
+                                        //     } else {
+                                        //         echo "<script>alert('Not Deleted')</script>";
+                                        //     }
+                                        // }
+                                        // ?>
                                     </tbody>
 
 
@@ -340,7 +340,6 @@ include('server.php');
 
                         </div>
                     </div>
-
 
 
                 </div>

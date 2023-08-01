@@ -21,7 +21,9 @@ include('server.php');
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
@@ -64,11 +66,13 @@ include('server.php');
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item ">
-                <a class="nav-link active" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                <a class="nav-link active" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-user"></i>
                     <span>Students</span>
                 </a>
-                <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo"
+                    data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="ad_st.php">Add Students</a>
                         <a class="collapse-item active" href="st_search.php">Search Students</a>
@@ -79,11 +83,13 @@ include('server.php');
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                    aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-user"></i>
                     <span>Teachers</span>
                 </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
 
                         <a class="collapse-item" href="#">Add Teachers</a>
@@ -105,11 +111,13 @@ include('server.php');
             <!-- Nav Item - Charts -->
 
             <li class="nav-item ">
-                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseMarks" aria-expanded="true" aria-controls="collapseMarks">
+                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseMarks" aria-expanded="true"
+                    aria-controls="collapseMarks">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Add Marks</span>
                 </a>
-                <div id="collapseMarks" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                <div id="collapseMarks" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
 
                         <a class="collapse-item" href="marks_jexpo.php">Jexpo Student</a>
@@ -120,10 +128,10 @@ include('server.php');
 
             </li>
             <?php /*<li class="nav-item">
-                <a class="nav-link" href="add_mark.php">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Add Marks</span></a>
-            </li>*/ ?>
+<a class="nav-link" href="add_mark.php">
+<i class="fas fa-fw fa-chart-area"></i>
+<span>Add Marks</span></a>
+</li>*/?>
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
@@ -167,12 +175,16 @@ include('server.php');
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $_SESSION['name']; ?></span>
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">
+                                    <?php echo $_SESSION['name']; ?>
+                                </span>
                                 <img class="img-profile rounded-circle" src="photos/images.png">
                             </a>
                             <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="#">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
@@ -182,7 +194,8 @@ include('server.php');
                                     Settings
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="logout.php" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="logout.php" data-toggle="modal"
+                                    data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
                                 </a>
@@ -204,10 +217,14 @@ include('server.php');
                                 <div class="col-12 text-center md-2 py-2">
 
                                     <div class="input-group mb-3">
-                                        <span class="input-group-text" id="addon-wrapping"><i class="fa fa-id-card" aria-hidden="true">&nbsp;&nbsp;</i> Registration No:</span>
-                                        <input type="text" pattern="[d/D][0-9]{9}" class="form-control" name="reg_no" maxlength="10" placeholder="Enter Registration No" aria-describedby="addon-wrapping" maxlength="10" required>
+                                        <span class="input-group-text" id="addon-wrapping"><i class="fa fa-id-card"
+                                                aria-hidden="true">&nbsp;&nbsp;</i> Registration No:</span>
+                                        <input type="text" pattern="[d/D][0-9]{9}" class="form-control" name="reg_no"
+                                            maxlength="10" placeholder="Enter Registration No"
+                                            aria-describedby="addon-wrapping" maxlength="10" required>
 
-                                        <button type="submit" name="show" id="show" class="btn btn-primary"><i class="fa fa-search" aria-hidden="true"></i> Search Details</button>
+                                        <button type="submit" name="show" id="show" class="btn btn-primary"><i
+                                                class="fa fa-search" aria-hidden="true"></i> Search Details</button>
                                     </div>
                                 </div>
 
@@ -228,18 +245,31 @@ include('server.php');
                     $query = "select * from student where reg_no = '$_POST[reg_no]'";
                     $query_run = mysqli_query($connection, $query);
                     while ($row = mysqli_fetch_assoc($query_run)) {
+                        $value = $row;
                         //if ($_POST['reg_no'] === $row['reg_no']) {
+                        if ($value <= 0) {
+                            echo "<script>alert('No Data Found')</script>";
+                            // echo "<script>console.log(" . $row . ")</script>";
+                        } else {
+                            echo "<script>alert('Data Found')</script>";
+                            // echo "<script>console.log(" . $row . ")</script>";
+                
+                        }
 
 
-
-                ?>
+                        ?>
                         <div class="container-fluid align-center">
 
                             <div class="card position-relative">
                                 <div class="card-header py-2">
                                     <h4 class="m-0 font-weight-bold text-primary">Basic Details</h4>
                                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                        <a class="btn btn-success me-md-2" href="st_edit.php?reg_no=<?= $row['reg_no'] ?>">Edit</a>
+                                        <!-- <form action="st_delete.php"> -->
+                                        <a class="btn btn-danger me-md-2" style="margin-right:10px;"
+                                            href="st_delete.php?reg_no=<?= $row['reg_no'] ?>">Delete</a>
+                                        <!-- </form> -->
+                                        <a class="btn btn-success me-md-2"
+                                            href="st_edit.php?reg_no=<?= $row['reg_no'] ?>">Edit</a>
                                     </div>
                                 </div>
 
@@ -247,7 +277,9 @@ include('server.php');
                                     <div class="table-responsive">
                                         <div class="col-12 text-center md-2 py-2">
                                             <label for="inputreg" class="form-label"></label>
-                                            <a style="border:10" href="<?php echo "upload/" . $row['st_image']; ?>"><img src="<?php echo "upload/" . $row['st_image']; ?>" height="100px" width="80px"></a>
+                                            <a style="border:10" href="<?php echo "upload/" . $row['st_image']; ?>"><img
+                                                    src="<?php echo "upload/" . $row['st_image']; ?>" height="100px"
+                                                    width="80px"></a>
                                         </div>
                                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 
@@ -262,63 +294,76 @@ include('server.php');
                                             </tr>
                                             <tr>
                                                 <td><b>Name: </b></td>
-                                                <td><?php echo $row['st_name']; ?>
+                                                <td>
+                                                    <?php echo $row['st_name']; ?>
                                                 </td>
 
                                                 <td><b>Registration No: </b></td>
-                                                <td> <?php echo $row['reg_no']; ?>
+                                                <td>
+                                                    <?php echo $row['reg_no']; ?>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td><b>Father Name: </b></td>
-                                                <td><?php echo $row['fathers_name']; ?>
+                                                <td>
+                                                    <?php echo $row['fathers_name']; ?>
                                                 </td>
 
                                                 <td><b>Branch: </b></td>
-                                                <td><?php echo $row['branch']; ?>
+                                                <td>
+                                                    <?php echo $row['branch']; ?>
                                                 </td>
 
                                             </tr>
 
                                             <tr>
                                                 <td><b>Email: </b></td>
-                                                <td><?php echo $row['email']; ?>
+                                                <td>
+                                                    <?php echo $row['email']; ?>
                                                 </td>
 
                                                 <td><b>Gender </b></td>
-                                                <td><?php echo $row['gender']; ?>
+                                                <td>
+                                                    <?php echo $row['gender']; ?>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td><b>Mobile No: </b></td>
-                                                <td><?php echo $row['ph_no']; ?>
+                                                <td>
+                                                    <?php echo $row['ph_no']; ?>
                                                 </td>
 
                                                 <td><b>Semester: </b></td>
-                                                <td><?php echo $row['semester']; ?>
+                                                <td>
+                                                    <?php echo $row['semester']; ?>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td><b>District: </b></td>
-                                                <td><?php echo $row['district']; ?>
+                                                <td>
+                                                    <?php echo $row['district']; ?>
                                                 </td>
 
                                                 <td><b>City: </b></td>
-                                                <td><?php echo $row['city']; ?>
+                                                <td>
+                                                    <?php echo $row['city']; ?>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td><b>Address: </b></td>
-                                                <td><?php echo $row['adress']; ?>
+                                                <td>
+                                                    <?php echo $row['adress']; ?>
                                                 </td>
 
                                                 <td><b>Pin Code: </b></td>
-                                                <td><?php echo $row['zip_cod']; ?>
+                                                <td>
+                                                    <?php echo $row['zip_cod']; ?>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td><b>Admission Status :</b></td>
-                                                <td><?php echo $row['ad_type']; ?>
+                                                <td>
+                                                    <?php echo $row['ad_type']; ?>
                                                 </td>
                                             </tr>
 
@@ -353,16 +398,16 @@ include('server.php');
                                             </tr>
 
 
-                                    <?php
-                                    // } else {
-                                    //echo "<script>alert('Please Enter Valid Details')</script>";
-                                    // }
-                                }
-                            }
+                                            <?php
+                        // } else {
+                        //echo "<script>alert('Please Enter Valid Details')</script>";
+                        // }
+                    }
+                }
 
 
 
-                                    ?>
+                ?>
 
 
 
@@ -377,18 +422,27 @@ include('server.php');
                                         while ($row1 = mysqli_fetch_assoc($query_run1)) {
 
 
-                                    ?>
+                                            ?>
 
                                             <tr align="center">
                                                 <td>SEMESTER - I</td>
-                                                <td><?php echo $row1['st_status'] ?></td>
-                                                <td><?php echo $row1['parcentage'] ?></td>
-                                                <td><?php echo $row1['gpa'] ?></td>
-                                                <td><?php echo $row1['grade'] ?></td>
-                                                <td><a href="st_edit_sem_1.php?reg_no=<?= $row1['reg_no'] ?>" class="btn btn-success btn-sm ">Edit</a></td>
+                                                <td>
+                                                    <?php echo $row1['st_status'] ?>
+                                                </td>
+                                                <td>
+                                                    <?php echo $row1['parcentage'] ?>
+                                                </td>
+                                                <td>
+                                                    <?php echo $row1['gpa'] ?>
+                                                </td>
+                                                <td>
+                                                    <?php echo $row1['grade'] ?>
+                                                </td>
+                                                <td><a href="st_edit_sem_1.php?reg_no=<?= $row1['reg_no'] ?>"
+                                                        class="btn btn-success btn-sm ">Edit</a></td>
                                             </tr>
 
-                                    <?php
+                                            <?php
                                         }
                                     }
                                     ?>
@@ -399,20 +453,29 @@ include('server.php');
                                         $query1 = "select * from mark_sem_2 where reg_no = '$_POST[reg_no]'";
                                         $query_run1 = mysqli_query($connection, $query1);
                                         while ($row1 = mysqli_fetch_assoc($query_run1)) {
-                                    ?>
+                                            ?>
 
 
 
                                             <tr align="center">
                                                 <td>SEMESTER - II</td>
-                                                <td><?php echo $row1['st_status'] ?></td>
-                                                <td><?php echo $row1['parcentage'] ?></td>
-                                                <td><?php echo $row1['gpa'] ?></td>
-                                                <td><?php echo $row1['grade'] ?></td>
-                                                <td><a href="st_edit_sem_2.php?reg_no=<?= $row1['reg_no'] ?>" class="btn btn-success btn-sm ">Edit</a></td>
+                                                <td>
+                                                    <?php echo $row1['st_status'] ?>
+                                                </td>
+                                                <td>
+                                                    <?php echo $row1['parcentage'] ?>
+                                                </td>
+                                                <td>
+                                                    <?php echo $row1['gpa'] ?>
+                                                </td>
+                                                <td>
+                                                    <?php echo $row1['grade'] ?>
+                                                </td>
+                                                <td><a href="st_edit_sem_2.php?reg_no=<?= $row1['reg_no'] ?>"
+                                                        class="btn btn-success btn-sm ">Edit</a></td>
                                             </tr>
 
-                                    <?php
+                                            <?php
                                         }
                                     }
                                     ?>
@@ -423,20 +486,29 @@ include('server.php');
                                         $query2 = "select * from mark_sem_3 where reg_no = '$_POST[reg_no]'";
                                         $query_run2 = mysqli_query($connection, $query2);
                                         while ($row2 = mysqli_fetch_assoc($query_run2)) {
-                                    ?>
+                                            ?>
 
 
 
                                             <tr align="center">
                                                 <td>SEMESTER - III</td>
-                                                <td><?php echo $row2['st_status'] ?></td>
-                                                <td><?php echo $row2['parcentage'] ?></td>
-                                                <td><?php echo $row2['gpa'] ?></td>
-                                                <td><?php echo $row2['grade'] ?></td>
-                                                <td><a href="st_edit_sem_3.php?reg_no=<?= $row2['reg_no'] ?>" class="btn btn-success btn-sm ">Edit</a></td>
+                                                <td>
+                                                    <?php echo $row2['st_status'] ?>
+                                                </td>
+                                                <td>
+                                                    <?php echo $row2['parcentage'] ?>
+                                                </td>
+                                                <td>
+                                                    <?php echo $row2['gpa'] ?>
+                                                </td>
+                                                <td>
+                                                    <?php echo $row2['grade'] ?>
+                                                </td>
+                                                <td><a href="st_edit_sem_3.php?reg_no=<?= $row2['reg_no'] ?>"
+                                                        class="btn btn-success btn-sm ">Edit</a></td>
                                             </tr>
 
-                                    <?php
+                                            <?php
                                         }
                                     }
                                     ?>
@@ -447,20 +519,29 @@ include('server.php');
                                         $query3 = "select * from mark_sem_4 where reg_no = '$_POST[reg_no]'";
                                         $query_run3 = mysqli_query($connection, $query3);
                                         while ($row3 = mysqli_fetch_assoc($query_run3)) {
-                                    ?>
+                                            ?>
 
 
 
                                             <tr align="center">
                                                 <td>SEMESTER - IV</td>
-                                                <td><?php echo $row3['st_status'] ?></td>
-                                                <td><?php echo $row3['parcentage'] ?></td>
-                                                <td><?php echo $row3['gpa'] ?></td>
-                                                <td><?php echo $row3['grade'] ?></td>
-                                                <td><a href="st_edit_sem_4.php?reg_no=<?= $row3['reg_no'] ?>" class="btn btn-success btn-sm ">Edit</a></td>
+                                                <td>
+                                                    <?php echo $row3['st_status'] ?>
+                                                </td>
+                                                <td>
+                                                    <?php echo $row3['parcentage'] ?>
+                                                </td>
+                                                <td>
+                                                    <?php echo $row3['gpa'] ?>
+                                                </td>
+                                                <td>
+                                                    <?php echo $row3['grade'] ?>
+                                                </td>
+                                                <td><a href="st_edit_sem_4.php?reg_no=<?= $row3['reg_no'] ?>"
+                                                        class="btn btn-success btn-sm ">Edit</a></td>
                                             </tr>
 
-                                    <?php
+                                            <?php
                                         }
                                     }
                                     ?>
@@ -471,20 +552,29 @@ include('server.php');
                                         $query4 = "select * from mark_sem_5 where reg_no = '$_POST[reg_no]'";
                                         $query_run4 = mysqli_query($connection, $query4);
                                         while ($row4 = mysqli_fetch_assoc($query_run4)) {
-                                    ?>
+                                            ?>
 
 
 
                                             <tr align="center">
                                                 <td>SEMESTER - V</td>
-                                                <td><?php echo $row4['st_status'] ?></td>
-                                                <td><?php echo $row4['parcentage'] ?></td>
-                                                <td><?php echo $row4['gpa'] ?></td>
-                                                <td><?php echo $row4['grade'] ?></td>
-                                                <td><a href="st_edit_sem_5.php?reg_no=<?= $row4['reg_no'] ?>" class="btn btn-success btn-sm ">Edit</a></td>
+                                                <td>
+                                                    <?php echo $row4['st_status'] ?>
+                                                </td>
+                                                <td>
+                                                    <?php echo $row4['parcentage'] ?>
+                                                </td>
+                                                <td>
+                                                    <?php echo $row4['gpa'] ?>
+                                                </td>
+                                                <td>
+                                                    <?php echo $row4['grade'] ?>
+                                                </td>
+                                                <td><a href="st_edit_sem_5.php?reg_no=<?= $row4['reg_no'] ?>"
+                                                        class="btn btn-success btn-sm ">Edit</a></td>
                                             </tr>
 
-                                    <?php
+                                            <?php
                                         }
                                     }
                                     ?>
@@ -495,30 +585,39 @@ include('server.php');
                                         $query5 = "select * from mark_sem_6 where reg_no = '$_POST[reg_no]'";
                                         $query_run5 = mysqli_query($connection, $query5);
                                         while ($row5 = mysqli_fetch_assoc($query_run5)) {
-                                    ?>
+                                            ?>
 
 
 
                                             <tr align="center">
                                                 <td>SEMESTER - VI</td>
-                                                <td><?php echo $row5['st_status'] ?></td>
-                                                <td><?php echo $row5['parcentage'] ?></td>
-                                                <td><?php echo $row5['gpa'] ?></td>
-                                                <td><?php echo $row5['grade'] ?></td>
-                                                <td><a href="st_edit_sem_6.php?reg_no=<?= $row5['reg_no'] ?>" class="btn btn-success btn-sm ">Edit</a></td>
+                                                <td>
+                                                    <?php echo $row5['st_status'] ?>
+                                                </td>
+                                                <td>
+                                                    <?php echo $row5['parcentage'] ?>
+                                                </td>
+                                                <td>
+                                                    <?php echo $row5['gpa'] ?>
+                                                </td>
+                                                <td>
+                                                    <?php echo $row5['grade'] ?>
+                                                </td>
+                                                <td><a href="st_edit_sem_6.php?reg_no=<?= $row5['reg_no'] ?>"
+                                                        class="btn btn-success btn-sm ">Edit</a></td>
                                             </tr>
 
-                                    <?php
+                                            <?php
                                         }
                                     }
                                     ?>
-                                        </table>
-                                    </div>
-                                </div>
+                                </table>
                             </div>
-                            <br>
-                            <br>
                         </div>
+                    </div>
+                    <br>
+                    <br>
+                </div>
 
 
 
@@ -536,7 +635,8 @@ include('server.php');
     </a>
 
     <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
