@@ -125,11 +125,11 @@ include('server.php');
 
             </li>
             <?php /* <li class="nav-item">
- <a class="nav-link" href="add_mark.php">
-     <i class="fas fa-fw fa-chart-area"></i>
-     <span>Add Marks</span></a>
+<a class="nav-link" href="add_mark.php">
+<i class="fas fa-fw fa-chart-area"></i>
+<span>Add Marks</span></a>
 </li>
- */?>
+*/?>
 
 
             <!-- Nav Item - Tables -->
@@ -293,20 +293,22 @@ include('server.php');
                                                         <!--Edit-->
                                                         <!--/a-->
                                                         <form action="" method="post">
-                                                            <button type="submit" value="<?php $row['reg_no']; ?>" name="delete"
+                                                            <button type="submit" value="<?php $row['reg_no']; ?>"
+                                                                onclick="btn()" name="delete"
                                                                 class="btn btn-danger btn-sm ">Delete</button>
                                                         </form>
 
                                                     </td>
                                                 </tr>
                                                 <?php $no++;
+                                                echo "<script>console.log($row['reg_no'])</script>";
                                             }
                                         }
 
 
-
-                                        $registration = mysqli_real_escape_string($connection, $_GET['reg_no']);
                                         if (isset($_POST['delete'])) {
+
+                                            $registration = mysqli_real_escape_string($connection, $_GET['reg_no']);
 
                                             $query = "DELETE FROM student WHERE reg_no='$registration'";
                                             $query_run = mysqli_query($connection, $query);
