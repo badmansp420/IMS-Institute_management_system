@@ -1,7 +1,6 @@
 <?PHP
 include('security.php');
-$connection = mysqli_connect("localhost", "root", "");
-$db = mysqli_select_db($connection, "e_sms");
+include('server.php');
 
 ?>
 
@@ -22,7 +21,9 @@ $db = mysqli_select_db($connection, "e_sms");
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
@@ -65,7 +66,8 @@ $db = mysqli_select_db($connection, "e_sms");
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                     <span>Students</span>
                 </a>
@@ -80,11 +82,13 @@ $db = mysqli_select_db($connection, "e_sms");
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                    aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                     <span>Teachers</span>
                 </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
 
                         <a class="collapse-item" href="#">Add Teachers</a>
@@ -104,11 +108,13 @@ $db = mysqli_select_db($connection, "e_sms");
             <!-- Nav Item - Charts -->
 
             <li class="nav-item ">
-                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseMarks" aria-expanded="true" aria-controls="collapseMarks">
+                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseMarks" aria-expanded="true"
+                    aria-controls="collapseMarks">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Add Marks</span>
                 </a>
-                <div id="collapseMarks" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                <div id="collapseMarks" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
 
                         <a class="collapse-item" href="marks_jexpo.php">Jexpo Student</a>
@@ -119,11 +125,11 @@ $db = mysqli_select_db($connection, "e_sms");
 
             </li>
             <?php /* <li class="nav-item">
-                <a class="nav-link" href="add_mark.php">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Add Marks</span></a>
-            </li>
-                */ ?>
+ <a class="nav-link" href="add_mark.php">
+     <i class="fas fa-fw fa-chart-area"></i>
+     <span>Add Marks</span></a>
+</li>
+ */?>
 
 
             <!-- Nav Item - Tables -->
@@ -165,12 +171,16 @@ $db = mysqli_select_db($connection, "e_sms");
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $_SESSION['name']; ?></span>
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">
+                                    <?php echo $_SESSION['name']; ?>
+                                </span>
                                 <img class="img-profile rounded-circle" src="photos/images.png">
                             </a>
                             <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="#">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
@@ -180,7 +190,8 @@ $db = mysqli_select_db($connection, "e_sms");
                                     Settings
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="logout.php" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="logout.php" data-toggle="modal"
+                                    data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
                                 </a>
@@ -248,35 +259,53 @@ $db = mysqli_select_db($connection, "e_sms");
                                             $no = 1;
                                             while ($row = mysqli_fetch_array($query_run)) {
 
-                                        ?>
+                                                ?>
                                                 <tr align="center">
-                                                    <td><?php echo $row['sl_no'] ?></td>
-                                                    <td><?php echo $row['st_name'] ?></td>
-                                                    <td><?php echo $row['reg_no'] ?></td>
-                                                    <td><?php echo $row['ad_type'] ?></td>
-                                                    <td><?php echo $row['branch'] ?></td>
-                                                    <td><?php echo $row['semester'] ?></td>
-                                                    <td><?php echo $row['gender'] ?></td>
-                                                    <td><?php echo $row['ph_no'] ?></td>
+                                                    <td>
+                                                        <?php echo $no ?>
+                                                    </td>
+                                                    <td>
+                                                        <?php echo $row['st_name'] ?>
+                                                    </td>
+                                                    <td>
+                                                        <?php echo $row['reg_no'] ?>
+                                                    </td>
+                                                    <td>
+                                                        <?php echo $row['ad_type'] ?>
+                                                    </td>
+                                                    <td>
+                                                        <?php echo $row['branch'] ?>
+                                                    </td>
+                                                    <td>
+                                                        <?php echo $row['semester'] ?>
+                                                    </td>
+                                                    <td>
+                                                        <?php echo $row['gender'] ?>
+                                                    </td>
+                                                    <td>
+                                                        <?php echo $row['ph_no'] ?>
+                                                    </td>
 
-                                                    <td><img src="<?php echo "upload/" . $row['st_image']; ?>" height="80px" width="65px"></td>
+                                                    <td><img src="<?php echo "upload/" . $row['st_image']; ?>" height="80px"
+                                                            width="65px"></td>
                                                     <td>
                                                         <!--a href="st_edit.php?reg_no=<//?= $row['reg_no'] ?>" class="btn btn-success btn-sm "-->
                                                         <!--Edit-->
                                                         <!--/a-->
                                                         <form action="" method="post">
-                                                            <button type="submit" value="<?php $row['reg_no']; ?>" name="delete" class="btn btn-danger btn-sm ">Delete</button>
+                                                            <button type="submit" value="<?php $row['reg_no']; ?>" name="delete"
+                                                                class="btn btn-danger btn-sm ">Delete</button>
                                                         </form>
 
                                                     </td>
                                                 </tr>
-                                        <?php $no++;
+                                                <?php $no++;
                                             }
                                         }
 
 
 
-                                        /*$registration=mysqli_real_escape_string($connection,$_GET['reg_no']);
+                                        $registration = mysqli_real_escape_string($connection, $_GET['reg_no']);
                                         if (isset($_POST['delete'])) {
 
                                             $query = "DELETE FROM student WHERE reg_no='$registration'";
@@ -286,7 +315,7 @@ $db = mysqli_select_db($connection, "e_sms");
                                             } else {
                                                 echo "<script>alert('Not Deleted')</script>";
                                             }
-                                        }*/
+                                        }
                                         ?>
                                     </tbody>
 
@@ -300,9 +329,9 @@ $db = mysqli_select_db($connection, "e_sms");
                                 $page = ceil($page);
 
                                 for ($i = 1; $i <= $page; $i++) {
-                                ?>
+                                    ?>
                                     <a href="table.php?page=<?= $i ?>" class="btn btn-primary"><?php echo $i . " "; ?></a>
-                                <?php
+                                    <?php
                                 }
                                 ?>
                             </div>
@@ -333,7 +362,8 @@ $db = mysqli_select_db($connection, "e_sms");
     </a>
 
     <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">

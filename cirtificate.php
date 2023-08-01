@@ -1,8 +1,8 @@
 <?php
 require("fpdf/fpdf.php");
 include('security.php');
-$connection = mysqli_connect("localhost", "root", "");
-$db = mysqli_select_db($connection, "e_sms");
+include('server.php');
+
 
 if (isset($_GET['reg_no'])) {
     $reg_no = mysqli_real_escape_string($connection, $_GET['reg_no']);
