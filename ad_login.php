@@ -1,3 +1,39 @@
+<?php
+session_start(); // ✅ Must be first
+
+// Handle form submission
+if (isset($_POST['submit'])) {
+    $connection = mysqli_connect("db", "ims_user", "ims_pass", "ims_db");
+
+    if (!$connection) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+
+    $email = mysqli_real_escape_string($connection, $_POST['email']);
+    $password = $_POST['password'];
+
+    $query = "SELECT * FROM admin WHERE email = '$email' LIMIT 1";
+    $query_run = mysqli_query($connection, $query);
+
+    if (mysqli_num_rows($query_run) == 1) {
+        $row = mysqli_fetch_assoc($query_run);
+
+        // If using password_hash (recommended)
+        // if (password_verify($password, $row['password'])) {
+
+        if ($row['password'] === $password) { // Not safe, just for now
+            $_SESSION['email'] = $row['email'];
+            $_SESSION['name'] = $row['name'];
+            header("Location:ad_das.php");
+            exit;
+        } else {
+            echo "<script>alert('Wrong Password');</script>";
+        }
+    } else {
+        echo "<script>alert('Email not found');</script>";
+    }
+}
+?>
 <!DOCTYPE html>
 <html>
 <link rel="icon" href="photos\ITA_LOGO .jpg">
@@ -153,49 +189,6 @@
             </div>
         </form>
     </div>
-
-
-    <?php
-    session_start();
-    if (isset($_POST['submit'])) {
-        
-        $connection = mysqli_connect("localhost", "root", "");
-        $db = mysqli_select_db($connection, "e_sms");
-
-        $email = mysqli_real_escape_string($connection, $_POST['email']);
-        $password = mysqli_real_escape_string($connection, $_POST['password']);
-
-        $query = "select * from admin where email = '$email' AND password='$password'";
-        $query_run = mysqli_query($connection, $query);
-
-        while ($row = mysqli_fetch_assoc($query_run)) {
-
-            /* if($query_run)
-            {
-                $_SESSION['email']=$email;
-                $_SESSION['name'] = $row['name'];
-                header('location:ad_das.php');
-            }
-            else
-            {
-                echo //$_SESSION['status']= "<script>alert('Email / Password is Invalid')</script>";
-                header('location:ad_login.php');
-            }*/
-            if ($row['email'] == $email) {
-                $_SESSION['email'] = $email;
-                if ($row['password'] == $password) {
-                    $_SESSION['email'] = $row['email'];
-                    $_SESSION['name'] = $row['name'];
-                    header("Location:ad_das.php");
-                } else {
-                    echo "<script>alert('Worng Email & Password')</script>";
-                }
-            } else {
-                echo "Worng Email Id";
-            }
-        }
-    }
-    ?>
 </body>
 
 </html>
